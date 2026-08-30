@@ -1,0 +1,78 @@
+---
+lang: es
+---
+
+# Medidas de frecuencia de una enfermedad {#sec-medidas-frecuencia}
+
+La primera tarea de la Epidemiología es cuantificar cuánta enfermedad hay en una población. Para ello se utilizan dos medidas de frecuencia que se confunden a menudo, pero que responden a preguntas distintas: la *prevalencia* y la *incidencia*.
+
+## Prevalencia
+
+:::{#def-prevalencia}
+## Prevalencia
+La _prevalencia_ de una enfermedad $E$ es la proporción de personas que tienen la enfermedad en un momento concreto,
+
+$$\mbox{Prevalencia}(E) = \frac{\mbox{N.º individuos afectados por $E$}}{\mbox{Tamaño poblacional}}$$
+:::
+
+:::{#exm-prevalencia}
+En una muestra de 1000 personas, 150 tenían gripe. La prevalencia de la gripe es aproximadamente
+
+$$\frac{150}{1000}=0.15 \Rightarrow 15\%.$$
+:::
+
+Obsérvese que en el numerador de la prevalencia se cuentan *todos* los casos existentes en ese instante, tanto los nuevos como los antiguos.
+
+## Incidencia o riesgo absoluto
+
+:::{#def-incidencia}
+## Incidencia
+La _incidencia_ o _riesgo absoluto_ de una enfermedad $E$ es la proporción de nuevos casos durante un periodo determinado (por día, por semana, por mes, etc.),
+
+$$R(E)=\frac{\mbox{N.º nuevos casos con $E$ en el periodo}}{\mbox{Tamaño de la población en riesgo al comienzo del periodo}}$$
+:::
+
+:::{#exm-incidencia}
+Al comienzo del año se tomó una muestra de 1000 personas sin gripe y al finalizar el año 80 habían tenido gripe. La incidencia de la gripe ese año fue
+
+$$R(E) = \frac{80}{1000} = 0.08 \Rightarrow 8\%.$$
+:::
+
+:::{.callout-important}
+En la incidencia, el denominador no es el tamaño de la población, sino el tamaño de la *población en riesgo*, es decir, las personas que al comienzo del periodo podían enfermar (no se cuentan ni los ya enfermos ni los inmunizados).
+:::
+
+## Prevalencia frente a incidencia
+
+|             | Tiempo  |        Casos        | Tipo de estudio |
+| ----------- | :-----: | :-----------------: | :-------------: |
+| Prevalencia | Puntual | Nuevos y existentes |   Transversal   |
+| Incidencia  | Periodo |     Solo nuevos     |  Longitudinal   |
+
+: Diferencias entre la prevalencia y la incidencia {#tbl-prevalencia-incidencia}
+
+- La prevalencia muestra el número de personas afectadas (la *carga* de la enfermedad) y es útil para planificar los recursos sanitarios necesarios.
+- La incidencia muestra la evolución de la enfermedad y es más útil para detectar brotes y estudiar sus causas.
+- La incidencia depende sobre todo de la contagiosidad de la enfermedad, mientras que la prevalencia depende también de la duración de la enfermedad y de lo agresiva que sea.
+
+:::{#exm-prevalencia-incidencia}
+Una enfermedad crónica como la diabetes o la artrosis tiene una incidencia prácticamente constante, al depender fundamentalmente de la edad y no ser contagiosa, y una prevalencia alta, ya que no existe cura para ella y las personas tampoco mueren a causa de ella, sino que viven con ella el resto de su vida.
+
+Por otro lado, una enfermedad como el ébola tiene una incidencia pequeña, al no ser muy contagiosa, y también una prevalencia pequeña, al ser una enfermedad mortal, ya que casi todas las personas que se contagian acaban muriendo.
+
+Finalmente, una enfermedad como la COVID tiene una incidencia muy alta, al ser muy contagiosa, y una prevalencia parecida a la incidencia, ya que la enfermedad suele acabar en un periodo de dos semanas desde el contagio (salvo en los casos que necesitan hospitalización).
+:::
+
+## Algunas consideraciones en el caso de la COVID
+
+La incidencia de la COVID se suele dar sobre un periodo de dos semanas (14 días), aunque no siempre, y por cada 100 000 habitantes.
+
+Los datos son poco precisos y subestiman el riesgo de la COVID:
+
+- Muchos asintomáticos no son detectados.
+- La detección de casos se realiza mediante tests diagnósticos que tienen un margen de error (falsos positivos y falsos negativos), como se verá en el @sec-tests-diagnosticos.
+- Se calcula dividiendo por el tamaño de la población (nuevos casos por cada 100 000 habitantes), pero habría que dividir por el tamaño de la población en riesgo (sin contar los ya infectados o inmunizados).
+
+Los datos oficiales pueden consultarse en la página del [Ministerio de Sanidad](https://www.sanidad.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/situacionActual.htm).
+
+Tanto la prevalencia como la incidencia permiten estudiar la magnitud y la evolución de una enfermedad, pero no permiten analizar sus posibles causas. Para ello es necesario comparar los riesgos de distintos grupos de población, que es lo que se verá en el siguiente capítulo.

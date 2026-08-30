@@ -1,0 +1,62 @@
+---
+lang: es
+---
+
+# La curva ROC {#sec-curva-roc}
+
+En los tests diagnósticos basados en la medición de una variable cuantitativa (como, por ejemplo, los tests de antígenos para la COVID) la sensibilidad y la especificidad dependen del umbral fijado para dar un positivo.
+
+Al bajar el umbral aumenta la sensibilidad, pero disminuye la especificidad, y al subirlo ocurre lo contrario, de manera que no es posible resumir la fiabilidad del test con un único par de valores. Para evaluar la fiabilidad de estos tests se suele utilizar la *curva ROC*.
+
+## Definición de la curva ROC
+
+:::{#def-curva-roc}
+## Curva ROC
+La _curva ROC_ (del inglés *Receiver Operating Characteristic*) de un test diagnóstico es la curva que resulta de representar la razón de verdaderos positivos (sensibilidad) frente a la razón de falsos positivos (1 − especificidad) para los diferentes umbrales de positivo del test.
+:::
+
+![Curva ROC de un test diagnóstico](img/tests/curva-roc){#fig-curva-roc width=65%}
+
+### Interpretación de la curva ROC
+
+:::{.callout-note title=Interpretación}
+- Cada punto de la curva corresponde a un umbral para el positivo.
+- El mejor test es el que se sitúa en la esquina superior izquierda del espacio (sensibilidad 1 y especificidad 1).
+- La diagonal representa un test con un diagnóstico aleatorio.
+:::
+
+Así, la curva ROC sirve también para seleccionar el umbral más adecuado en función de si interesa priorizar la sensibilidad o la especificidad, tal y como se explicó en el @sec-tests-diagnosticos.
+
+## Área debajo de la curva ROC (AUC)
+
+Para evaluar la fiabilidad de un test diagnóstico independientemente del umbral de positivos se suele medir el área bajo la curva ROC, también conocida como *AUC* (*area under the curve*).
+
+:::{#def-auc}
+## Área bajo la curva
+El _área bajo la curva ROC_ o _AUC_ es la probabilidad de que, tomados al azar un individuo enfermo y otro sano, el test asigne al enfermo un valor más indicativo de la enfermedad que al sano.
+:::
+
+Según el valor del AUC, se tiene:
+
+|      AUC      |     Fiabilidad del test |
+| :-----------: | ----------------------- |
+|      0.5      | Diagnóstico aleatorio   |
+|  [0.5, 0.6)   | Test malo               |
+|  [0.6, 0.75)  | Test regular            |
+|  [0.75, 0.9)  | Test bueno              |
+|  [0.9, 0.97)  | Test muy bueno          |
+|   [0.97, 1)   | Test excelente          |
+
+: Interpretación del área bajo la curva ROC {#tbl-auc}
+
+## Aplicaciones a la COVID
+
+- [Fiabilidad del diagnóstico por PCR](https://www.rcpjournals.org/content/clinmedicine/20/6/e209).
+- [Fiabilidad del diagnóstico por el test de antígenos](https://www.cdc.gov/mmwr/volumes/69/wr/mm695152a3.htm).
+- [Comparativa de tests](https://academic.oup.com/ajcp/article/154/5/575/5898531).
+
+Los tests de antígenos son más rápidos que las PCR, pero son menos fiables.
+
+Por un lado, son menos sensibles que una prueba de PCR, debido a que se requiere una mayor cantidad de virus en las mucosas nasales o bucales para que se muestre un resultado positivo. Eso limita su efectividad cuando las personas llevan poco tiempo infectadas y el virus está empezando a reproducirse.
+
+Por otro lado, también son menos específicos que la PCR y, por tanto, producen más falsos positivos.

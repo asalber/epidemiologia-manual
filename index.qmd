@@ -1,0 +1,50 @@
+---
+lang: es
+---
+
+# Prefacio {.unnumbered}
+
+¡Bienvenida/os al manual de Epidemiología!
+
+Este libro es una introducción a los conceptos básicos de la Epidemiología para alumnos de grados en Ciencias de la Salud.
+
+La pandemia de la COVID-19 puso en boca de todos un montón de términos técnicos de la Epidemiología (prevalencia, incidencia, riesgo relativo, sensibilidad, falsos positivos, etc.) que, con demasiada frecuencia, se utilizan de manera errónea, incluso por los propios medios de comunicación, generando confusión en la población no experta.
+
+El objetivo de este manual es explicar los principales índices epidemiológicos utilizados en el control de las enfermedades e ilustrar su uso con ejemplos de aplicación. Como todos ellos se basan en el cálculo de probabilidades, el libro comienza repasando el concepto de probabilidad y sus principales propiedades, para después presentar
+
+- las medidas de frecuencia de una enfermedad (prevalencia e incidencia),
+- las medidas de asociación entre un factor de exposición y una enfermedad (riesgo relativo y odds ratio), y
+- las medidas de fiabilidad de los tests diagnósticos (sensibilidad, especificidad, valores predictivos y curva ROC).
+
+Este libro se complementa con los siguientes recursos:
+
+- [Manual de Estadística](https://aprendeconalf.es/estadistica-manual/)
+- [Colección de problemas resueltos](https://aprendeconalf.es/estadistica-ejercicios/)
+- [Prácticas de Estadística con R](https://aprendeconalf.es/estadistica-practicas-r/)
+- [Aplicación para el estudio de test diagnósticos](http://nube.aprendeconalf.es/shiny/diagnostic-test/)
+
+## Licencia
+
+Esta obra está bajo una licencia Reconocimiento – No comercial – Compartir bajo la misma licencia 3.0 España de Creative Commons. Para ver una copia de esta licencia, visite [https://creativecommons.org/licenses/by-nc-sa/3.0/es/](https://creativecommons.org/licenses/by-nc-sa/3.0/es/).
+
+Con esta licencia eres libre de:
+
+- Copiar, distribuir y mostrar este trabajo.
+- Realizar modificaciones de este trabajo.
+
+Bajo las siguientes condiciones:
+
+- **Reconocimiento**
+Debe reconocer los créditos de la obra de la manera especificada por el autor o el licenciador (pero no de una manera que sugiera que tiene su apoyo o apoyan el uso que hace de su obra).
+
+- **No comercial**
+No puede utilizar esta obra para fines comerciales.
+
+- **Compartir bajo la misma licencia**
+Si altera o transforma esta obra, o genera una obra derivada, sólo puede distribuir la obra generada bajo una licencia idéntica a ésta.
+
+Al reutilizar o distribuir la obra, tiene que dejar bien claro los términos de la licencia de esta obra.
+
+Estas condiciones pueden no aplicarse si se obtiene el permiso del titular de los derechos de autor.
+
+Nada en esta licencia menoscaba o restringe los derechos morales del autor.

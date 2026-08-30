@@ -1,0 +1,317 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Manual de Epidemiología",
+    "section": "",
+    "text": "Prefacio\n¡Bienvenida/os al manual de Epidemiología!\nEste libro es una introducción a los conceptos básicos de la Epidemiología para alumnos de grados en Ciencias de la Salud.\nLa pandemia de la COVID-19 puso en boca de todos un montón de términos técnicos de la Epidemiología (prevalencia, incidencia, riesgo relativo, sensibilidad, falsos positivos, etc.) que, con demasiada frecuencia, se utilizan de manera errónea, incluso por los propios medios de comunicación, generando confusión en la población no experta.\nEl objetivo de este manual es explicar los principales índices epidemiológicos utilizados en el control de las enfermedades e ilustrar su uso con ejemplos de aplicación. Como todos ellos se basan en el cálculo de probabilidades, el libro comienza repasando el concepto de probabilidad y sus principales propiedades, para después presentar\nEste libro se complementa con los siguientes recursos:",
+    "crumbs": [
+      "Prefacio"
+    ]
+  },
+  {
+    "objectID": "index.html#licencia",
+    "href": "index.html#licencia",
+    "title": "Manual de Epidemiología",
+    "section": "Licencia",
+    "text": "Licencia\nEsta obra está bajo una licencia Reconocimiento – No comercial – Compartir bajo la misma licencia 3.0 España de Creative Commons. Para ver una copia de esta licencia, visite https://creativecommons.org/licenses/by-nc-sa/3.0/es/.\nCon esta licencia eres libre de:\n\nCopiar, distribuir y mostrar este trabajo.\nRealizar modificaciones de este trabajo.\n\nBajo las siguientes condiciones:\n\nReconocimiento Debe reconocer los créditos de la obra de la manera especificada por el autor o el licenciador (pero no de una manera que sugiera que tiene su apoyo o apoyan el uso que hace de su obra).\nNo comercial No puede utilizar esta obra para fines comerciales.\nCompartir bajo la misma licencia Si altera o transforma esta obra, o genera una obra derivada, sólo puede distribuir la obra generada bajo una licencia idéntica a ésta.\n\nAl reutilizar o distribuir la obra, tiene que dejar bien claro los términos de la licencia de esta obra.\nEstas condiciones pueden no aplicarse si se obtiene el permiso del titular de los derechos de autor.\nNada en esta licencia menoscaba o restringe los derechos morales del autor.",
+    "crumbs": [
+      "Prefacio"
+    ]
+  },
+  {
+    "objectID": "01-introduccion.html",
+    "href": "01-introduccion.html",
+    "title": "1  Introducción a la Epidemiología",
+    "section": "",
+    "text": "1.1 ¿Qué es la Epidemiología?\nLa palabra epidemiología viene del griego epi (sobre), demos (gente) y logos (estudio), es decir, el estudio de lo que le ocurre a las poblaciones.\nObsérvese que, a diferencia de la Medicina clínica, que se ocupa del diagnóstico y el tratamiento de un paciente concreto, la Epidemiología estudia siempre poblaciones. Sus dos preguntas fundamentales son:\nDebido a la epidemia provocada por el coronavirus, la Epidemiología se ha convertido en una de las ramas de la Medicina que más interés despiertan.\nSin embargo, mucho antes de la COVID, la Epidemiología ya había servido en otros momentos históricos para resolver o controlar algunos de los problemas de salud pública más serios que ha enfrentado la humanidad.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción a la Epidemiología</span>"
+    ]
+  },
+  {
+    "objectID": "01-introduccion.html#qué-es-la-epidemiología",
+    "href": "01-introduccion.html#qué-es-la-epidemiología",
+    "title": "1  Introducción a la Epidemiología",
+    "section": "",
+    "text": "Definición 1.1 (Epidemiología) En el ámbito de la salud pública, la Epidemiología es la rama de la Medicina que se encarga del estudio de la distribución y las causas de los eventos relacionados con la salud (normalmente enfermedades) en las poblaciones, y de la aplicación de este estudio al control de los problemas de salud pública.\n\n\n\n\n\n\n\nFigura 1.1: El epidemiólogo trabaja como un detective que busca las causas de una enfermedad\n\n\n\n\n\n¿Cuánta enfermedad hay y cómo se distribuye? (Epidemiología descriptiva)\n¿Qué factores la causan o la previenen? (Epidemiología analítica)\n\n\n\n\n\n\n\n\nFigura 1.2: Fernando Simón, director del Centro de Coordinación de Alertas y Emergencias Sanitarias durante la pandemia de COVID-19\n\n\n\n\n\n1.1.1 Algunos descubrimientos históricos\n\n1854: John Snow determina que la causa de la epidemia de cólera que asolaba Londres era que el agua estaba contaminada con heces.\n1898: Ronald Ross averigua que el transmisor de la malaria es el mosquito Anopheles.\n1950: Se descubre que fumar es el principal factor de riesgo del cáncer de pulmón.\n1954: Se valida la primera vacuna contra la poliomielitis (la de Jonas Salk).\n1970: Se observa que el ejercicio físico y una dieta sana reducen el riesgo de sufrir un infarto.\n1983: Robert Gallo, Luc Montagnier y Françoise Barré-Sinoussi identifican el virus que causa el SIDA. Poco después se observó que el riesgo de contraer el VIH aumentaba con ciertas prácticas sexuales y con el consumo de algunos tipos de drogas.\n2020: Y llegó la COVID…",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción a la Epidemiología</span>"
+    ]
+  },
+  {
+    "objectID": "01-introduccion.html#el-lenguaje-de-la-epidemiología",
+    "href": "01-introduccion.html#el-lenguaje-de-la-epidemiología",
+    "title": "1  Introducción a la Epidemiología",
+    "section": "1.2 El lenguaje de la Epidemiología",
+    "text": "1.2 El lenguaje de la Epidemiología\nEn estos tiempos de pandemia un montón de términos técnicos de la Epidemiología se han convertido en lugares comunes gracias a los medios de comunicación.\n\n\n\n\n\n\nFigura 1.3: Términos epidemiológicos habituales en los medios de comunicación\n\n\n\nSin embargo, muchos de estos términos se utilizan de manera errónea, incluso por los propios medios de comunicación, y generan confusión en la población no experta. En este manual se explican los principales conceptos epidemiológicos usados en el control de enfermedades como la COVID y se ilustra su uso con ejemplos de aplicación.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción a la Epidemiología</span>"
+    ]
+  },
+  {
+    "objectID": "01-introduccion.html#índices-epidemiológicos",
+    "href": "01-introduccion.html#índices-epidemiológicos",
+    "title": "1  Introducción a la Epidemiología",
+    "section": "1.3 Índices epidemiológicos",
+    "text": "1.3 Índices epidemiológicos\nLos índices epidemiológicos que se estudian en este manual pueden agruparse en tres bloques:\n\nMedidas de frecuencia de una enfermedad (Capítulo 3)\n\nMiden cuánta enfermedad hay en una población.\n\nPrevalencia.\nIncidencia o riesgo absoluto.\n\n\nMedidas de asociación (Capítulo 4)\n\nMiden la relación entre la exposición a un factor y la aparición de la enfermedad.\n\nRiesgo y odds.\nRiesgo relativo y odds ratio.\n\n\nMedidas de fiabilidad de los tests diagnósticos (Capítulo 5 y Capítulo 6)\n\nMiden la capacidad de un test para diagnosticar o descartar la enfermedad.\n\nSensibilidad y especificidad.\nValores predictivos.\nCurva ROC y área bajo la curva.\n\n\n\nTodos estos índices están basados en el cálculo de probabilidades, por lo que en el siguiente capítulo se introduce el concepto de probabilidad y sus principales propiedades.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción a la Epidemiología</span>"
+    ]
+  },
+  {
+    "objectID": "02-probabilidad.html",
+    "href": "02-probabilidad.html",
+    "title": "2  Probabilidad y odds",
+    "section": "",
+    "text": "2.1 El concepto de probabilidad\nTodos los índices epidemiológicos que se estudian en este manual son, en el fondo, probabilidades o cocientes de probabilidades. Por eso, antes de definirlos, conviene repasar el concepto de probabilidad, sus propiedades y su interpretación, así como una forma alternativa de medir la incertidumbre: el odds.\nA lo largo de la historia ha habido diferentes intentos de definir matemáticamente el concepto de probabilidad. Quizá la más conocida, y la primera que se enseña en las escuelas, es la definición clásica de Laplace.\nSin embargo, esta definición tiene serios inconvenientes ya que, para poder usarla, todos los casos posibles del experimento deben tener la misma probabilidad de ocurrir (equiprobabilidad), y esto no suele ocurrir en la vida real (por ejemplo, no todos los grupos sanguíneos tienen la misma probabilidad de ocurrir).\nPor este motivo, en el ámbito de las Ciencias de la Salud es mucho más común utilizar la definición de probabilidad basada en el cálculo de frecuencias.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Probabilidad y odds</span>"
+    ]
+  },
+  {
+    "objectID": "02-probabilidad.html#el-concepto-de-probabilidad",
+    "href": "02-probabilidad.html#el-concepto-de-probabilidad",
+    "title": "2  Probabilidad y odds",
+    "section": "",
+    "text": "Definición 2.1 (Probabilidad: definición clásica de Laplace) Dado un experimento aleatorio con espacio muestral \\(\\Omega\\) en el que todos los casos posibles son equiprobables, la probabilidad de un suceso \\(E\\) es\n\\[P(E)=\\frac{|E|}{|\\Omega|}=\\frac{\\mbox{Casos favorables a $E$}}{\\mbox{Casos posibles}}\\]\n\n\nEjemplo 2.1 Al tirar un dado equilibrado, la probabilidad de sacar un número par \\(E=\\{2, 4, 6\\}\\) es\n\\[P(E) = \\frac{3}{6} = 0.5.\\]\n\n\n\n\nDefinición 2.2 (Probabilidad: definición frecuentista) La probabilidad de un suceso \\(E\\) se aproxima mediante su frecuencia relativa en una muestra de tamaño \\(n\\),\n\\[P(E)\\approx f_E = \\frac{n_E}{n}=\\frac{\\mbox{Frecuencia absoluta del suceso}}{\\mbox{Tamaño muestral}}\\]\n\n\nEjemplo 2.2 Se ha aplicado un tratamiento a 100 personas y se han curado 75. Entonces, la probabilidad de curación del tratamiento es\n\\[P(E) = \\frac{75}{100} = 0.75 \\Rightarrow 75\\%.\\]\n\n\n\n\n\n\n\nAdvertencia\n\n\n\nLa definición frecuentista no permite calcular el valor exacto de la probabilidad de un suceso, sino tan solo una aproximación, que será mejor cuanto mayor sea el tamaño de la muestra.\n\n\n\n2.1.1 Algunas propiedades de la probabilidad\n\nUna probabilidad es un número real entre 0 y 1:\n\n\\[0\\leq P(E)\\leq 1.\\]\n\nLa suma de las probabilidades de todos los casos posibles es 1:\n\n\\[P(\\Omega) = P(e_1) + P(e_2) + \\cdots + P(e_n) = 1.\\]\n\nLa probabilidad de que ocurra lo contrario de un suceso es 1 menos la probabilidad del suceso:\n\n\\[P(\\overline E) = 1 - P(E).\\]\nDe este modo, cuanto más probable es que ocurra un suceso, menos probable es que ocurra su contrario, y viceversa.\n\n\n2.1.2 Interpretación de una probabilidad\nLa probabilidad mide la verosimilitud de un suceso. De manera informal, se puede decir que la probabilidad mide la creencia o la confianza que tenemos en la ocurrencia de un suceso.\n\n\n\n\n\n\nInterpretación\n\n\n\n\n\\(P(E) = 0 \\Rightarrow\\) Mínima verosimilitud (el suceso no ocurre nunca).\n\\(P(E) = 0.5 \\Rightarrow\\) Verosimilitud media (máxima incertidumbre).\n\\(P(E) = 1 \\Rightarrow\\) Máxima verosimilitud (el suceso ocurre siempre).\n\n\n\n\n\n\n\n\n\nFigura 2.1: Escala de interpretación de una probabilidad\n\n\n\nAunque el concepto de probabilidad es el más extendido en las aplicaciones que requieren cuantificar la incertidumbre sobre la ocurrencia de un suceso, existen otras formas de cuantificar esa incertidumbre, como por ejemplo el odds.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Probabilidad y odds</span>"
+    ]
+  },
+  {
+    "objectID": "02-probabilidad.html#el-concepto-de-odds",
+    "href": "02-probabilidad.html#el-concepto-de-odds",
+    "title": "2  Probabilidad y odds",
+    "section": "2.2 El concepto de odds",
+    "text": "2.2 El concepto de odds\n\nDefinición 2.3 (Odds) El odds de un suceso \\(E\\) es el cociente entre el número de casos en los que ocurre \\(E\\) y el número de casos en los que no ocurre,\n\\[O(E)=\\frac{\\mbox{N.º casos con $E$}}{\\mbox{N.º casos sin $E$}}=\\frac{P(E)}{P(\\overline E)}\\]\n\n\nEjemplo 2.3 Se ha aplicado un tratamiento a 100 personas y se han curado 75. Entonces, el odds de curación del tratamiento es\n\\[O(E) = \\frac{75}{25} = 3,\\]\nes decir, por cada persona que no se cura hay 3 que se curan.\n\n\n\n\n\n\n\nAdvertencia\n\n\n\nA diferencia de una probabilidad, un odds puede ser mayor que 1. De hecho, no tiene cota superior.\n\n\n\n2.2.1 Interpretación de un odds\nLos odds también permiten cuantificar la verosimilitud de un suceso…, pero en una escala diferente, ya que se trata de una razón de probabilidades.\n\n\n\n\n\n\nInterpretación\n\n\n\n\n\\(O(E) = 0 \\Rightarrow\\) Mínima verosimilitud.\n\\(O(E) = 1 \\Rightarrow\\) Verosimilitud media (máxima incertidumbre).\n\\(O(E) = \\infty \\Rightarrow\\) Máxima verosimilitud.\n\n\n\n\n\n\n\n\n\nFigura 2.2: Escala de interpretación de un odds\n\n\n\n\n\n2.2.2 Conversión de odds en probabilidades\nComo el odds es una función de la probabilidad, es posible convertir un odds en una probabilidad aplicando la siguiente fórmula:\n\\[\\frac{O(E)}{1 + O(E)} = \\frac{\\dfrac{P(E)}{P(\\overline E)}}{1 + \\dfrac{P(E)}{P(\\overline E)}} = \\frac{\\dfrac{P(E)}{P(\\overline E)}}{\\dfrac{P(\\overline E) + P(E)}{P(\\overline E)}} = P(E).\\]\n\nEjemplo 2.4 Se ha aplicado un tratamiento a 100 personas y se han curado 75, de manera que\n\\[O(E) = \\frac{75}{25} = 3 \\Rightarrow P(E) = \\frac{3}{1+3}=0.75.\\]\n\nY, del mismo modo, se puede pasar de una probabilidad a un odds mediante la fórmula\n\\[O(E) = \\frac{P(E)}{1-P(E)}.\\]",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Probabilidad y odds</span>"
+    ]
+  },
+  {
+    "objectID": "03-medidas-frecuencia.html",
+    "href": "03-medidas-frecuencia.html",
+    "title": "3  Medidas de frecuencia de una enfermedad",
+    "section": "",
+    "text": "3.1 Prevalencia\nLa primera tarea de la Epidemiología es cuantificar cuánta enfermedad hay en una población. Para ello se utilizan dos medidas de frecuencia que se confunden a menudo, pero que responden a preguntas distintas: la prevalencia y la incidencia.\nObsérvese que en el numerador de la prevalencia se cuentan todos los casos existentes en ese instante, tanto los nuevos como los antiguos.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Medidas de frecuencia de una enfermedad</span>"
+    ]
+  },
+  {
+    "objectID": "03-medidas-frecuencia.html#prevalencia",
+    "href": "03-medidas-frecuencia.html#prevalencia",
+    "title": "3  Medidas de frecuencia de una enfermedad",
+    "section": "",
+    "text": "Definición 3.1 (Prevalencia) La prevalencia de una enfermedad \\(E\\) es la proporción de personas que tienen la enfermedad en un momento concreto,\n\\[\\mbox{Prevalencia}(E) = \\frac{\\mbox{N.º individuos afectados por $E$}}{\\mbox{Tamaño poblacional}}\\]\n\n\nEjemplo 3.1 En una muestra de 1000 personas, 150 tenían gripe. La prevalencia de la gripe es aproximadamente\n\\[\\frac{150}{1000}=0.15 \\Rightarrow 15\\%.\\]",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Medidas de frecuencia de una enfermedad</span>"
+    ]
+  },
+  {
+    "objectID": "03-medidas-frecuencia.html#incidencia-o-riesgo-absoluto",
+    "href": "03-medidas-frecuencia.html#incidencia-o-riesgo-absoluto",
+    "title": "3  Medidas de frecuencia de una enfermedad",
+    "section": "3.2 Incidencia o riesgo absoluto",
+    "text": "3.2 Incidencia o riesgo absoluto\n\nDefinición 3.2 (Incidencia) La incidencia o riesgo absoluto de una enfermedad \\(E\\) es la proporción de nuevos casos durante un periodo determinado (por día, por semana, por mes, etc.),\n\\[R(E)=\\frac{\\mbox{N.º nuevos casos con $E$ en el periodo}}{\\mbox{Tamaño de la población en riesgo al comienzo del periodo}}\\]\n\n\nEjemplo 3.2 Al comienzo del año se tomó una muestra de 1000 personas sin gripe y al finalizar el año 80 habían tenido gripe. La incidencia de la gripe ese año fue\n\\[R(E) = \\frac{80}{1000} = 0.08 \\Rightarrow 8\\%.\\]\n\n\n\n\n\n\n\nImportante\n\n\n\nEn la incidencia, el denominador no es el tamaño de la población, sino el tamaño de la población en riesgo, es decir, las personas que al comienzo del periodo podían enfermar (no se cuentan ni los ya enfermos ni los inmunizados).",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Medidas de frecuencia de una enfermedad</span>"
+    ]
+  },
+  {
+    "objectID": "03-medidas-frecuencia.html#prevalencia-frente-a-incidencia",
+    "href": "03-medidas-frecuencia.html#prevalencia-frente-a-incidencia",
+    "title": "3  Medidas de frecuencia de una enfermedad",
+    "section": "3.3 Prevalencia frente a incidencia",
+    "text": "3.3 Prevalencia frente a incidencia\n\n\n\nTabla 3.1: Diferencias entre la prevalencia y la incidencia\n\n\n\n\n\n\nTiempo\nCasos\nTipo de estudio\n\n\n\n\nPrevalencia\nPuntual\nNuevos y existentes\nTransversal\n\n\nIncidencia\nPeriodo\nSolo nuevos\nLongitudinal\n\n\n\n\n\n\n\nLa prevalencia muestra el número de personas afectadas (la carga de la enfermedad) y es útil para planificar los recursos sanitarios necesarios.\nLa incidencia muestra la evolución de la enfermedad y es más útil para detectar brotes y estudiar sus causas.\nLa incidencia depende sobre todo de la contagiosidad de la enfermedad, mientras que la prevalencia depende también de la duración de la enfermedad y de lo agresiva que sea.\n\n\nEjemplo 3.3 Una enfermedad crónica como la diabetes o la artrosis tiene una incidencia prácticamente constante, al depender fundamentalmente de la edad y no ser contagiosa, y una prevalencia alta, ya que no existe cura para ella y las personas tampoco mueren a causa de ella, sino que viven con ella el resto de su vida.\nPor otro lado, una enfermedad como el ébola tiene una incidencia pequeña, al no ser muy contagiosa, y también una prevalencia pequeña, al ser una enfermedad mortal, ya que casi todas las personas que se contagian acaban muriendo.\nFinalmente, una enfermedad como la COVID tiene una incidencia muy alta, al ser muy contagiosa, y una prevalencia parecida a la incidencia, ya que la enfermedad suele acabar en un periodo de dos semanas desde el contagio (salvo en los casos que necesitan hospitalización).",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Medidas de frecuencia de una enfermedad</span>"
+    ]
+  },
+  {
+    "objectID": "03-medidas-frecuencia.html#algunas-consideraciones-en-el-caso-de-la-covid",
+    "href": "03-medidas-frecuencia.html#algunas-consideraciones-en-el-caso-de-la-covid",
+    "title": "3  Medidas de frecuencia de una enfermedad",
+    "section": "3.4 Algunas consideraciones en el caso de la COVID",
+    "text": "3.4 Algunas consideraciones en el caso de la COVID\nLa incidencia de la COVID se suele dar sobre un periodo de dos semanas (14 días), aunque no siempre, y por cada 100 000 habitantes.\nLos datos son poco precisos y subestiman el riesgo de la COVID:\n\nMuchos asintomáticos no son detectados.\nLa detección de casos se realiza mediante tests diagnósticos que tienen un margen de error (falsos positivos y falsos negativos), como se verá en el Capítulo 5.\nSe calcula dividiendo por el tamaño de la población (nuevos casos por cada 100 000 habitantes), pero habría que dividir por el tamaño de la población en riesgo (sin contar los ya infectados o inmunizados).\n\nLos datos oficiales pueden consultarse en la página del Ministerio de Sanidad.\nTanto la prevalencia como la incidencia permiten estudiar la magnitud y la evolución de una enfermedad, pero no permiten analizar sus posibles causas. Para ello es necesario comparar los riesgos de distintos grupos de población, que es lo que se verá en el siguiente capítulo.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Medidas de frecuencia de una enfermedad</span>"
+    ]
+  },
+  {
+    "objectID": "04-medidas-asociacion.html",
+    "href": "04-medidas-asociacion.html",
+    "title": "4  Medidas de asociación",
+    "section": "",
+    "text": "4.1 Riesgo relativo\nTanto la prevalencia como la incidencia permiten estudiar la magnitud y la evolución de una enfermedad, pero no permiten analizar sus posibles causas. Cuando se quiere investigar si la exposición a un determinado factor influye en el desarrollo de una enfermedad hay que comparar los riesgos de dos grupos:\nLos resultados del estudio se resumen en una tabla de contingencia como la siguiente, donde \\(E\\) es el suceso de padecer la enfermedad y \\(\\overline E\\) el de no padecerla.\nA partir de esta tabla se pueden definir dos medidas de asociación entre el factor y la enfermedad: el riesgo relativo y el odds ratio.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Medidas de asociación</span>"
+    ]
+  },
+  {
+    "objectID": "04-medidas-asociacion.html#riesgo-relativo",
+    "href": "04-medidas-asociacion.html#riesgo-relativo",
+    "title": "4  Medidas de asociación",
+    "section": "",
+    "text": "Definición 4.1 (Riesgo relativo) El riesgo relativo de un suceso \\(E\\) es el cociente entre el riesgo del grupo tratamiento y el riesgo del grupo control,\n\\[RR(E)=\\frac{\\mbox{Riesgo grupo tratamiento}}{\\mbox{Riesgo grupo control}}=\\frac{R_T(E)}{R_C(E)}=\\frac{a/(a+b)}{c/(c+d)}\\]\n\n\nEjemplo 4.1 Para estudiar la eficacia de una vacuna contra la gripe se ha tomado una muestra de 500 personas vacunadas y otra de 500 no vacunadas, obteniéndose los siguientes resultados.\n\n\n\n\nGripe \\(G\\)\nNo gripe \\(\\overline{G}\\)\n\n\n\n\nVacunados \\(T\\)\n20\n480\n\n\nNo vacunados \\(C\\)\n80\n420\n\n\n\nEl riesgo relativo de padecer gripe es\n\\[RR(G) = \\frac{20/(20+480)}{80/(80+420)} = 0.25,\\]\nes decir, el riesgo de padecer gripe en los vacunados es la cuarta parte del riesgo en los no vacunados.\n\n\n4.1.1 Interpretación del riesgo relativo\n\n\n\n\n\n\nInterpretación\n\n\n\n\n\\(RR=1 \\Rightarrow\\) No hay asociación entre el suceso y la exposición al factor.\n\\(RR&lt;1 \\Rightarrow\\) La exposición al factor disminuye el riesgo del suceso (factor de protección).\n\\(RR&gt;1 \\Rightarrow\\) La exposición al factor aumenta el riesgo del suceso (factor de riesgo).\n\n\n\n\n\n\n\n\n\nFigura 4.1: Escala de interpretación del riesgo relativo",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Medidas de asociación</span>"
+    ]
+  },
+  {
+    "objectID": "04-medidas-asociacion.html#odds-ratio",
+    "href": "04-medidas-asociacion.html#odds-ratio",
+    "title": "4  Medidas de asociación",
+    "section": "4.2 Odds ratio",
+    "text": "4.2 Odds ratio\nDel mismo modo que se pueden comparar los riesgos de los grupos tratamiento y control, se pueden comparar también sus odds.\n\nDefinición 4.2 (Odds ratio) El odds ratio o razón de odds de un suceso \\(E\\) es el cociente entre el odds del grupo tratamiento y el odds del grupo control,\n\\[OR(E)=\\frac{\\mbox{Odds grupo tratamiento}}{\\mbox{Odds grupo control}}=\\frac{O_T(E)}{O_C(E)}=\\frac{a/b}{c/d}=\\frac{ad}{bc}\\]\n\n\nEjemplo 4.2 Con los datos del ejemplo anterior,\n\n\n\n\nGripe \\(G\\)\nNo gripe \\(\\overline{G}\\)\n\n\n\n\nVacunados \\(T\\)\n20\n480\n\n\nNo vacunados \\(C\\)\n80\n420\n\n\n\nel odds ratio de padecer gripe es\n\\[OR(G) = \\frac{20/480}{80/420} = 0.22.\\]\n\n\n4.2.1 Interpretación del odds ratio\n\n\n\n\n\n\nInterpretación\n\n\n\n\n\\(OR=1 \\Rightarrow\\) No existe asociación entre el suceso y la exposición al factor.\n\\(OR&lt;1 \\Rightarrow\\) La exposición al factor disminuye el riesgo del suceso.\n\\(OR&gt;1 \\Rightarrow\\) La exposición al factor aumenta el riesgo del suceso.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Medidas de asociación</span>"
+    ]
+  },
+  {
+    "objectID": "04-medidas-asociacion.html#riesgo-relativo-frente-a-odds-ratio",
+    "href": "04-medidas-asociacion.html#riesgo-relativo-frente-a-odds-ratio",
+    "title": "4  Medidas de asociación",
+    "section": "4.3 Riesgo relativo frente a odds ratio",
+    "text": "4.3 Riesgo relativo frente a odds ratio\nEl riesgo relativo es una comparación de probabilidades, pero depende de la incidencia de la enfermedad.\nLa interpretación del odds ratio es más enrevesada porque es contrafactual, ya que indica cuántas veces es más frecuente el suceso en el grupo tratamiento en comparación con el control, asumiendo que en el grupo control es tan frecuente que ocurra el suceso como que no. Su ventaja es que no depende de la incidencia de la enfermedad, lo que lo hace imprescindible en los estudios de casos y controles, donde el investigador fija de antemano el número de enfermos y sanos de la muestra.\n\nEjemplo 4.3 Para estudiar la asociación entre fumar y el cáncer de pulmón se han tomado dos muestras, la segunda con el doble de pacientes sanos que la primera.\n\n\n\nMuestra 1\nCáncer \\(E\\)\nNo cáncer \\(\\overline{E}\\)\n\n\n\n\nFumadores \\(T\\)\n60\n80\n\n\nNo fumadores \\(C\\)\n40\n320\n\n\n\n\\[\n\\begin{aligned}\nRR(E) &= \\frac{60/(60+80)}{40/(40+320)} = 3.86,\\\\\nOR(E) &= \\frac{60/80}{40/320} = 6.\n\\end{aligned}\n\\]\n\n\n\nMuestra 2\nCáncer \\(E\\)\nNo cáncer \\(\\overline{E}\\)\n\n\n\n\nFumadores \\(T\\)\n60\n160\n\n\nNo fumadores \\(C\\)\n40\n640\n\n\n\n\\[\n\\begin{aligned}\nRR(E) &= \\frac{60/(60+160)}{40/(40+640)} = 4.64,\\\\\nOR(E) &= \\frac{60/160}{40/640} = 6.\n\\end{aligned}\n\\]\nObsérvese que el riesgo relativo cambia al cambiar la proporción de sanos de la muestra, mientras que el odds ratio se mantiene constante.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Medidas de asociación</span>"
+    ]
+  },
+  {
+    "objectID": "04-medidas-asociacion.html#aplicación-a-la-covid",
+    "href": "04-medidas-asociacion.html#aplicación-a-la-covid",
+    "title": "4  Medidas de asociación",
+    "section": "4.4 Aplicación a la COVID",
+    "text": "4.4 Aplicación a la COVID\nDurante la pandemia se publicaron multitud de estudios que utilizaban estas medidas de asociación para identificar los factores de riesgo y de protección frente a la COVID:\n\nLa edad aumenta la gravedad.\nEl riesgo de infección depende del grupo sanguíneo.\nEl déficit de vitamina D aumenta el riesgo de infección.\nLas personas con demencia tienen mayor riesgo de infectarse.\nEl remdesivir acelera la recuperación.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Medidas de asociación</span>"
+    ]
+  },
+  {
+    "objectID": "05-tests-diagnosticos.html",
+    "href": "05-tests-diagnosticos.html",
+    "title": "5  Tests diagnósticos",
+    "section": "",
+    "text": "5.1 Sensibilidad y especificidad de un test\nOtra aplicación de la Epidemiología basada en el cálculo de probabilidades son los tests diagnósticos.\nNormalmente producen dos resultados: positivo (\\(+\\)), a favor de la enfermedad, y negativo (\\(-\\)), en contra de ella. Al comparar el resultado del test con el verdadero estado del paciente se obtienen cuatro posibilidades:\nUn test perfecto sería aquel que no produce ni falsos positivos ni falsos negativos, pero en la práctica ningún test lo consigue. Por eso es necesario medir su fiabilidad.\nLa fiabilidad a priori de un test diagnóstico, es decir, antes de aplicarlo, depende de las siguientes probabilidades.\nAhora bien, la utilidad del test depende también de la prevalencia de la enfermedad en la población a la que se aplica.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tests diagnósticos</span>"
+    ]
+  },
+  {
+    "objectID": "05-tests-diagnosticos.html#sensibilidad-y-especificidad-de-un-test",
+    "href": "05-tests-diagnosticos.html#sensibilidad-y-especificidad-de-un-test",
+    "title": "5  Tests diagnósticos",
+    "section": "",
+    "text": "Definición 5.2 (Sensibilidad) La sensibilidad de un test diagnóstico es la proporción de resultados positivos del test entre las personas con la enfermedad,\n\\[P(+|E)=\\frac{VP}{VP+FN}\\]\n\n\nDefinición 5.3 (Especificidad) La especificidad de un test diagnóstico es la proporción de resultados negativos del test entre las personas sin la enfermedad,\n\\[P(-|\\overline{E})=\\frac{VN}{VN+FP}\\]\n\n\nEjemplo 5.1 Un test de antígenos para detectar el SARS-CoV-2 tiene una sensibilidad del 70 % y una especificidad del 95 %. Esto significa que:\n\nSi aplicamos el test a 100 enfermos, dará 70 positivos y 30 negativos.\nSi aplicamos el test a 100 sanos, dará 95 negativos y 5 positivos.\n\n\n\n\nEjemplo 5.2 Utilizando el test del ejemplo anterior en una población de 1000 personas y suponiendo una prevalencia del 1 %, se tiene\n\n\n\nTest\n\\(E\\)\n\\(\\overline{E}\\)\n\n\n\n\nPositivo \\(+\\)\n7\n50\n\n\nNegativo \\(-\\)\n3\n940\n\n\n\n\n\n\n\n\n\nFigura 5.1: Resultados de un test diagnóstico con una sensibilidad del 70 %, una especificidad del 95 % y una prevalencia del 1 %\n\n\n\nMientras que, si la prevalencia es del 10 %, se tiene\n\n\n\nTest\n\\(E\\)\n\\(\\overline{E}\\)\n\n\n\n\nPositivo \\(+\\)\n70\n45\n\n\nNegativo \\(-\\)\n30\n855\n\n\n\n\n\n\n\n\n\nFigura 5.2: Resultados de un test diagnóstico con una sensibilidad del 70 %, una especificidad del 95 % y una prevalencia del 10 %\n\n\n\nObsérvese que, aunque la sensibilidad y la especificidad del test son las mismas en ambos casos, con una prevalencia del 1 % la mayoría de los positivos del test son falsos positivos, mientras que con una prevalencia del 10 % la mayoría son verdaderos positivos.\n\n\n\n\n\n\n\nAplicación interactiva\n\n\n\nPara ver los resultados de un test diagnóstico en función de la prevalencia, la sensibilidad y la especificidad se puede utilizar esta aplicación para tests diagnósticos.\n\n\n\n5.1.1 Cuándo usar un test más sensible o más específico\nUna mayor sensibilidad aumenta el número de verdaderos positivos y disminuye el número de falsos negativos, mientras que una mayor especificidad aumenta el número de verdaderos negativos y disminuye el número de falsos positivos.\nPor tanto, utilizaremos un test más sensible cuando:\n\nLa enfermedad es grave o muy contagiosa y es importante detectarla.\nLa enfermedad es curable.\nLos falsos positivos no provocan traumas serios.\n\nY utilizaremos un test más específico cuando:\n\nLa enfermedad es importante pero difícil o imposible de curar.\nLos falsos positivos pueden provocar traumas serios.\nEl tratamiento de los falsos positivos puede tener graves consecuencias.\n\nTanto la sensibilidad como la especificidad son indicadores de la fiabilidad de un test a priori, es decir, antes de aplicarlo. Una vez que el test se ha aplicado y se conoce su resultado, a la hora de diagnosticar la enfermedad o descartarla es mejor utilizar los valores predictivos.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tests diagnósticos</span>"
+    ]
+  },
+  {
+    "objectID": "05-tests-diagnosticos.html#valores-predictivos-de-un-test",
+    "href": "05-tests-diagnosticos.html#valores-predictivos-de-un-test",
+    "title": "5  Tests diagnósticos",
+    "section": "5.2 Valores predictivos de un test",
+    "text": "5.2 Valores predictivos de un test\n\nDefinición 5.4 (Valor predictivo positivo) El valor predictivo positivo de un test diagnóstico es la proporción de personas con la enfermedad entre las personas con resultado positivo en el test,\n\\[VPP = P(E|+) = \\frac{VP}{VP+FP}\\]\n\n\nDefinición 5.5 (Valor predictivo negativo) El valor predictivo negativo de un test diagnóstico es la proporción de personas sin la enfermedad entre las personas con resultado negativo en el test,\n\\[VPN = P(\\overline{E}|-) = \\frac{VN}{VN+FN}\\]\n\n\nEjemplo 5.3 Siguiendo con el ejemplo anterior y suponiendo una prevalencia del 1 %, se tiene\n\n\n\nTest\n\\(E\\)\n\\(\\overline{E}\\)\n\n\n\n\nPositivo \\(+\\)\n7\n50\n\n\nNegativo \\(-\\)\n3\n940\n\n\n\n\\[VPP = \\frac{7}{7+50} = 0.123, \\qquad VPN = \\frac{940}{3+940} = 0.997.\\]\nMientras que, si la prevalencia es del 10 %, se tiene\n\n\n\nTest\n\\(E\\)\n\\(\\overline{E}\\)\n\n\n\n\nPositivo \\(+\\)\n70\n45\n\n\nNegativo \\(-\\)\n30\n855\n\n\n\n\\[VPP = \\frac{70}{70+45} = 0.609, \\qquad VPN = \\frac{855}{30+855} = 0.966.\\]\n\n\n\n\n\n\n\nImportante\n\n\n\nA diferencia de la sensibilidad y la especificidad, que son propiedades del test, los valores predictivos dependen de la prevalencia de la enfermedad en la población estudiada. Por eso un mismo test puede ser muy útil en una población con prevalencia alta e inútil en una población con prevalencia baja.\n\n\n\n5.2.1 Interpretación de los valores predictivos\n\n\n\n\n\n\nInterpretación\n\n\n\n\\[\n\\begin{array}{rcl}\nVPP&gt;0.5 & \\Rightarrow & \\mbox{Diagnosticar la enfermedad},\\\\\nVPN&gt;0.5 & \\Rightarrow & \\mbox{Descartar la enfermedad}.\n\\end{array}\n\\]\n\n\nEn el ejemplo anterior, con una prevalencia del 1 % un resultado positivo no permite diagnosticar la enfermedad (\\(VPP=0.123\\)), mientras que con una prevalencia del 10 % sí (\\(VPP=0.609\\)). En ambos casos, en cambio, un resultado negativo permite descartarla con bastante seguridad.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tests diagnósticos</span>"
+    ]
+  },
+  {
+    "objectID": "06-curva-roc.html",
+    "href": "06-curva-roc.html",
+    "title": "6  La curva ROC",
+    "section": "",
+    "text": "6.1 Definición de la curva ROC\nEn los tests diagnósticos basados en la medición de una variable cuantitativa (como, por ejemplo, los tests de antígenos para la COVID) la sensibilidad y la especificidad dependen del umbral fijado para dar un positivo.\nAl bajar el umbral aumenta la sensibilidad, pero disminuye la especificidad, y al subirlo ocurre lo contrario, de manera que no es posible resumir la fiabilidad del test con un único par de valores. Para evaluar la fiabilidad de estos tests se suele utilizar la curva ROC.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>La curva ROC</span>"
+    ]
+  },
+  {
+    "objectID": "06-curva-roc.html#definición-de-la-curva-roc",
+    "href": "06-curva-roc.html#definición-de-la-curva-roc",
+    "title": "6  La curva ROC",
+    "section": "",
+    "text": "Definición 6.1 (Curva ROC) La curva ROC (del inglés Receiver Operating Characteristic) de un test diagnóstico es la curva que resulta de representar la razón de verdaderos positivos (sensibilidad) frente a la razón de falsos positivos (1 − especificidad) para los diferentes umbrales de positivo del test.\n\n\n\n\n\n\n\nFigura 6.1: Curva ROC de un test diagnóstico\n\n\n\n\n6.1.1 Interpretación de la curva ROC\n\n\n\n\n\n\nInterpretación\n\n\n\n\nCada punto de la curva corresponde a un umbral para el positivo.\nEl mejor test es el que se sitúa en la esquina superior izquierda del espacio (sensibilidad 1 y especificidad 1).\nLa diagonal representa un test con un diagnóstico aleatorio.\n\n\n\nAsí, la curva ROC sirve también para seleccionar el umbral más adecuado en función de si interesa priorizar la sensibilidad o la especificidad, tal y como se explicó en el Capítulo 5.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>La curva ROC</span>"
+    ]
+  },
+  {
+    "objectID": "06-curva-roc.html#área-debajo-de-la-curva-roc-auc",
+    "href": "06-curva-roc.html#área-debajo-de-la-curva-roc-auc",
+    "title": "6  La curva ROC",
+    "section": "6.2 Área debajo de la curva ROC (AUC)",
+    "text": "6.2 Área debajo de la curva ROC (AUC)\nPara evaluar la fiabilidad de un test diagnóstico independientemente del umbral de positivos se suele medir el área bajo la curva ROC, también conocida como AUC (area under the curve).\n\nDefinición 6.2 (Área bajo la curva) El área bajo la curva ROC o AUC es la probabilidad de que, tomados al azar un individuo enfermo y otro sano, el test asigne al enfermo un valor más indicativo de la enfermedad que al sano.\n\nSegún el valor del AUC, se tiene:\n\n\n\nTabla 6.1: Interpretación del área bajo la curva ROC\n\n\n\n\n\nAUC\nFiabilidad del test\n\n\n\n\n0.5\nDiagnóstico aleatorio\n\n\n[0.5, 0.6)\nTest malo\n\n\n[0.6, 0.75)\nTest regular\n\n\n[0.75, 0.9)\nTest bueno\n\n\n[0.9, 0.97)\nTest muy bueno\n\n\n[0.97, 1)\nTest excelente",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>La curva ROC</span>"
+    ]
+  },
+  {
+    "objectID": "06-curva-roc.html#aplicaciones-a-la-covid",
+    "href": "06-curva-roc.html#aplicaciones-a-la-covid",
+    "title": "6  La curva ROC",
+    "section": "6.3 Aplicaciones a la COVID",
+    "text": "6.3 Aplicaciones a la COVID\n\nFiabilidad del diagnóstico por PCR.\nFiabilidad del diagnóstico por el test de antígenos.\nComparativa de tests.\n\nLos tests de antígenos son más rápidos que las PCR, pero son menos fiables.\nPor un lado, son menos sensibles que una prueba de PCR, debido a que se requiere una mayor cantidad de virus en las mucosas nasales o bucales para que se muestre un resultado positivo. Eso limita su efectividad cuando las personas llevan poco tiempo infectadas y el virus está empezando a reproducirse.\nPor otro lado, también son menos específicos que la PCR y, por tanto, producen más falsos positivos.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>La curva ROC</span>"
+    ]
+  },
+  {
+    "objectID": "referencias.html",
+    "href": "referencias.html",
+    "title": "Referencias",
+    "section": "",
+    "text": "Recursos generales",
+    "crumbs": [
+      "Apéndices",
+      "Referencias"
+    ]
+  },
+  {
+    "objectID": "referencias.html#recursos-generales",
+    "href": "referencias.html#recursos-generales",
+    "title": "Referencias",
+    "section": "",
+    "text": "Acción matemática contra el coronavirus.\nR Epidemic Consortium (RECON).\nAnalysis of epidemiological data using R and Epicalc.\nR resources about COVID-19.",
+    "crumbs": [
+      "Apéndices",
+      "Referencias"
+    ]
+  },
+  {
+    "objectID": "referencias.html#datos-epidemiológicos",
+    "href": "referencias.html#datos-epidemiológicos",
+    "title": "Referencias",
+    "section": "Datos epidemiológicos",
+    "text": "Datos epidemiológicos\n\nSituación actual de la COVID-19 (Ministerio de Sanidad).\nCentro Nacional de Epidemiología (Instituto de Salud Carlos III).\nEuropean Centre for Disease Prevention and Control (ECDC).\nWorld Health Organization (WHO).",
+    "crumbs": [
+      "Apéndices",
+      "Referencias"
+    ]
+  },
+  {
+    "objectID": "referencias.html#aplicaciones-interactivas",
+    "href": "referencias.html#aplicaciones-interactivas",
+    "title": "Referencias",
+    "section": "Aplicaciones interactivas",
+    "text": "Aplicaciones interactivas\n\nAplicación para el estudio de tests diagnósticos.",
+    "crumbs": [
+      "Apéndices",
+      "Referencias"
+    ]
+  },
+  {
+    "objectID": "referencias.html#otros-manuales-del-autor",
+    "href": "referencias.html#otros-manuales-del-autor",
+    "title": "Referencias",
+    "section": "Otros manuales del autor",
+    "text": "Otros manuales del autor\n\nManual de Estadística.\nColección de problemas resueltos de Estadística.\nPrácticas de Estadística con R.",
+    "crumbs": [
+      "Apéndices",
+      "Referencias"
+    ]
+  }
+]

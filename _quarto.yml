@@ -1,0 +1,76 @@
+project:
+  type: book
+  output-dir: "docs"
+  preview:
+    port: 1313
+
+execute:
+  freeze: auto
+  cache: true
+  daemon: 3600
+
+website:
+  favicon: img/logos/favicon.ico
+  reader-mode: true
+  comments:
+    hypothesis:
+      theme: clean
+      openSidebar: true
+
+book:
+  title: "Manual de Epidemiología"
+  subtitle: "para Ciencias de la Salud"
+  author: "Alfredo Sánchez Alberca"
+  date: today
+  output-file: "manual-epidemiologia"
+  image: img/logos/sticker.png
+  cover-image: img/logos/sticker.png
+  sharing: [twitter, linkedin]
+  downloads: [pdf, epub]
+  favicon: "img/logos/favicon.ico"
+  sidebar:
+    logo: img/logos/aprendeconalf.png
+    tools:
+      - icon: house-fill
+        href: https://aprendeconalf.es
+  open-graph: true
+  twitter-card:
+    site: "@aprendeconalf"
+  chapters:
+    - index.qmd
+    - 01-introduccion.qmd
+    - 02-probabilidad.qmd
+    - 03-medidas-frecuencia.qmd
+    - 04-medidas-asociacion.qmd
+    - 05-tests-diagnosticos.qmd
+    - 06-curva-roc.qmd
+  appendices:
+    - referencias.qmd
+
+format:
+  html:
+    highlight-style: a11y
+    theme:
+      dark: [darkly, custom-dark.scss]
+      light: [flatly, custom.scss]
+    html-math-method: mathjax
+    default-image-extension: svg
+  pdf:
+    documentclass: scrreport
+    papersize: a4
+    default-image-extension: pdf
+    template-partials:
+      - before-body.tex
+    titlegraphic: img/logos/sticker.png
+    institution: CEU San Pablo
+    email: asalber@ceu.es
+    web: https://aprendeconalf.es
+    logo: img/logos/aprendeconalf.png
+    include-in-header:
+      - preamble.tex
+    keep-tex: true
+
+  epub:
+    cover-image: img/logos/sticker.png
+    html-math-method: mathml
+    toc: true

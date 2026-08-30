@@ -1,0 +1,147 @@
+---
+lang: es
+---
+
+# Tests diagnósticos {#sec-tests-diagnosticos}
+
+Otra aplicación de la Epidemiología basada en el cálculo de probabilidades son los *tests diagnósticos*.
+
+:::{#def-test-diagnostico}
+## Test diagnóstico
+Un _test diagnóstico_ es una prueba usada para diagnosticar una enfermedad o descartarla.
+:::
+
+Normalmente producen dos resultados: positivo ($+$), a favor de la enfermedad, y negativo ($-$), en contra de ella. Al comparar el resultado del test con el verdadero estado del paciente se obtienen cuatro posibilidades:
+
+| Test          |             $E$             |         $\overline{E}$         |
+| ------------- | :-------------------------: | :---------------------------: |
+| Positivo $+$  | Verdadero positivo ($VP$)   | Falso positivo ($FP$)         |
+| Negativo $-$  | Falso negativo ($FN$)       | Verdadero negativo ($VN$)     |
+
+: Resultados posibles de un test diagnóstico {#tbl-resultados-test}
+
+Un test perfecto sería aquel que no produce ni falsos positivos ni falsos negativos, pero en la práctica ningún test lo consigue. Por eso es necesario medir su fiabilidad.
+
+## Sensibilidad y especificidad de un test
+
+La fiabilidad *a priori* de un test diagnóstico, es decir, antes de aplicarlo, depende de las siguientes probabilidades.
+
+:::{#def-sensibilidad}
+## Sensibilidad
+La _sensibilidad_ de un test diagnóstico es la proporción de resultados positivos del test entre las personas con la enfermedad,
+
+$$P(+|E)=\frac{VP}{VP+FN}$$
+:::
+
+:::{#def-especificidad}
+## Especificidad
+La _especificidad_ de un test diagnóstico es la proporción de resultados negativos del test entre las personas sin la enfermedad,
+
+$$P(-|\overline{E})=\frac{VN}{VN+FP}$$
+:::
+
+:::{#exm-sensibilidad-especificidad}
+Un test de antígenos para detectar el SARS-CoV-2 tiene una sensibilidad del 70 % y una especificidad del 95 %. Esto significa que:
+
+- Si aplicamos el test a 100 enfermos, dará 70 positivos y 30 negativos.
+- Si aplicamos el test a 100 sanos, dará 95 negativos y 5 positivos.
+:::
+
+Ahora bien, la utilidad del test depende también de la prevalencia de la enfermedad en la población a la que se aplica.
+
+:::{#exm-test-prevalencia}
+Utilizando el test del ejemplo anterior en una población de 1000 personas y suponiendo una prevalencia del 1 %, se tiene
+
+| Test          | $E$ | $\overline{E}$ |
+| ------------- | :-: | :-----------: |
+| Positivo $+$  |  7  |      50       |
+| Negativo $-$  |  3  |      940      |
+
+![Resultados de un test diagnóstico con una sensibilidad del 70 %, una especificidad del 95 % y una prevalencia del 1 %](img/tests/resultados-test-prevalencia-1){#fig-resultados-test-prevalencia-1 width=85%}
+
+Mientras que, si la prevalencia es del 10 %, se tiene
+
+| Test          | $E$ | $\overline{E}$ |
+| ------------- | :-: | :-----------: |
+| Positivo $+$  | 70  |      45       |
+| Negativo $-$  | 30  |      855      |
+
+![Resultados de un test diagnóstico con una sensibilidad del 70 %, una especificidad del 95 % y una prevalencia del 10 %](img/tests/resultados-test-prevalencia-10){#fig-resultados-test-prevalencia-10 width=85%}
+
+Obsérvese que, aunque la sensibilidad y la especificidad del test son las mismas en ambos casos, con una prevalencia del 1 % la mayoría de los positivos del test son falsos positivos, mientras que con una prevalencia del 10 % la mayoría son verdaderos positivos.
+:::
+
+:::{.callout-tip title="Aplicación interactiva"}
+Para ver los resultados de un test diagnóstico en función de la prevalencia, la sensibilidad y la especificidad se puede utilizar esta [aplicación para tests diagnósticos](http://nube.aprendeconalf.es/shiny/diagnostic-test/).
+:::
+
+### Cuándo usar un test más sensible o más específico
+
+Una mayor sensibilidad aumenta el número de verdaderos positivos y disminuye el número de falsos negativos, mientras que una mayor especificidad aumenta el número de verdaderos negativos y disminuye el número de falsos positivos.
+
+Por tanto, utilizaremos un test **más sensible** cuando:
+
+- La enfermedad es grave o muy contagiosa y es importante detectarla.
+- La enfermedad es curable.
+- Los falsos positivos no provocan traumas serios.
+
+Y utilizaremos un test **más específico** cuando:
+
+- La enfermedad es importante pero difícil o imposible de curar.
+- Los falsos positivos pueden provocar traumas serios.
+- El tratamiento de los falsos positivos puede tener graves consecuencias.
+
+Tanto la sensibilidad como la especificidad son indicadores de la fiabilidad de un test *a priori*, es decir, antes de aplicarlo. Una vez que el test se ha aplicado y se conoce su resultado, a la hora de diagnosticar la enfermedad o descartarla es mejor utilizar los *valores predictivos*.
+
+## Valores predictivos de un test
+
+:::{#def-valor-predictivo-positivo}
+## Valor predictivo positivo
+El _valor predictivo positivo_ de un test diagnóstico es la proporción de personas con la enfermedad entre las personas con resultado positivo en el test,
+
+$$VPP = P(E|+) = \frac{VP}{VP+FP}$$
+:::
+
+:::{#def-valor-predictivo-negativo}
+## Valor predictivo negativo
+El _valor predictivo negativo_ de un test diagnóstico es la proporción de personas sin la enfermedad entre las personas con resultado negativo en el test,
+
+$$VPN = P(\overline{E}|-) = \frac{VN}{VN+FN}$$
+:::
+
+:::{#exm-valores-predictivos}
+Siguiendo con el ejemplo anterior y suponiendo una prevalencia del 1 %, se tiene
+
+| Test          | $E$ | $\overline{E}$ |
+| ------------- | :-: | :-----------: |
+| Positivo $+$  |  7  |      50       |
+| Negativo $-$  |  3  |      940      |
+
+$$VPP = \frac{7}{7+50} = 0.123, \qquad VPN = \frac{940}{3+940} = 0.997.$$
+
+Mientras que, si la prevalencia es del 10 %, se tiene
+
+| Test          | $E$ | $\overline{E}$ |
+| ------------- | :-: | :-----------: |
+| Positivo $+$  | 70  |      45       |
+| Negativo $-$  | 30  |      855      |
+
+$$VPP = \frac{70}{70+45} = 0.609, \qquad VPN = \frac{855}{30+855} = 0.966.$$
+:::
+
+:::{.callout-important}
+A diferencia de la sensibilidad y la especificidad, que son propiedades del test, los valores predictivos dependen de la prevalencia de la enfermedad en la población estudiada. Por eso un mismo test puede ser muy útil en una población con prevalencia alta e inútil en una población con prevalencia baja.
+:::
+
+### Interpretación de los valores predictivos
+
+:::{.callout-note title=Interpretación}
+$$
+\begin{array}{rcl}
+VPP>0.5 & \Rightarrow & \mbox{Diagnosticar la enfermedad},\\
+VPN>0.5 & \Rightarrow & \mbox{Descartar la enfermedad}.
+\end{array}
+$$
+:::
+
+En el ejemplo anterior, con una prevalencia del 1 % un resultado positivo no permite diagnosticar la enfermedad ($VPP=0.123$), mientras que con una prevalencia del 10 % sí ($VPP=0.609$). En ambos casos, en cambio, un resultado negativo permite descartarla con bastante seguridad.

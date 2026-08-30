@@ -1,0 +1,29 @@
+---
+lang: es
+---
+
+# Referencias {#sec-referencias .unnumbered}
+
+## Recursos generales
+
+- [Acción matemática contra el coronavirus](http://matematicas.uclm.es/cemat/covid19/).
+- [R Epidemic Consortium (RECON)](https://www.repidemicsconsortium.org/).
+- [Analysis of epidemiological data using R and Epicalc](https://cran.r-project.org/doc/contrib/Epicalc_Book.pdf).
+- [R resources about COVID-19](https://statsandr.com/blog/top-r-resources-on-covid-19-coronavirus/#coronavirus).
+
+## Datos epidemiológicos
+
+- [Situación actual de la COVID-19 (Ministerio de Sanidad)](https://www.sanidad.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/situacionActual.htm).
+- [Centro Nacional de Epidemiología (Instituto de Salud Carlos III)](https://www.isciii.es/QueHacemos/Servicios/VigilanciaSaludPublicaRENAVE/Paginas/default.aspx).
+- [European Centre for Disease Prevention and Control (ECDC)](https://www.ecdc.europa.eu/en/data).
+- [World Health Organization (WHO)](https://www.who.int/data).
+
+## Aplicaciones interactivas
+
+- [Aplicación para el estudio de tests diagnósticos](http://nube.aprendeconalf.es/shiny/diagnostic-test/).
+
+## Otros manuales del autor
+
+- [Manual de Estadística](https://aprendeconalf.es/estadistica-manual/).
+- [Colección de problemas resueltos de Estadística](https://aprendeconalf.es/estadistica-ejercicios/).
+- [Prácticas de Estadística con R](https://aprendeconalf.es/estadistica-practicas-r/).
