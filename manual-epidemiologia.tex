@@ -1,26 +1,29 @@
 % Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
 %
 \documentclass[
+  spanish,
   a4paper,
 ]{scrreport}
-
+\usepackage{xcolor}
 \usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
 \else % if luatex or xetex
-  \usepackage{unicode-math}
+  \usepackage{unicode-math} % this also loads fontspec
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi
 \usepackage{lmodern}
-\ifPDFTeX\else  
-    % xetex/luatex font selection
+\ifPDFTeX\else
+  % xetex/luatex font selection
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -38,9 +41,6 @@
 }{% if KOMA class
   \KOMAoptions{parskip=half}}
 \makeatother
-\usepackage{xcolor}
-\setlength{\emergencystretch}{3em} % prevent overfull lines
-\setcounter{secnumdepth}{5}
 % Make \paragraph and \subparagraph free-standing
 \makeatletter
 \ifx\paragraph\undefined\else
@@ -66,8 +66,8 @@
 \makeatother
 
 
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -92,6 +92,28 @@
 % Set default figure placement to htbp
 \def\fps@figure{htbp}
 \makeatother
+
+
+
+\ifLuaTeX
+\usepackage[bidi=basic,shorthands=off]{babel}
+\else
+\usepackage[bidi=default,shorthands=off]{babel}
+\fi
+\ifLuaTeX
+  \usepackage{selnolig} % disable illegal ligatures
+\fi
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
 
 %\newfontfamily\Ubuntu[Mapping=tex-text]{Ubuntu}
 \usepackage{pgfplots}
@@ -160,9 +182,9 @@
 \newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
 \usepackage{amsthm}
 \theoremstyle{definition}
-\newtheorem{example}{Ejemplo}[chapter]
-\theoremstyle{definition}
 \newtheorem{definition}{Definición}[chapter]
+\theoremstyle{definition}
+\newtheorem{example}{Ejemplo}[chapter]
 \theoremstyle{remark}
 \AtBeginDocument{\renewcommand*{\proofname}{Prueba}}
 \newtheorem*{remark}{Observación}
@@ -176,20 +198,9 @@
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
-
-\ifLuaTeX
-\usepackage[bidi=basic]{babel}
-\else
-\usepackage[bidi=default]{babel}
-\fi
-\babelprovide[main,import]{spanish}
-% get rid of language-specific shorthands (see #6817):
-\let\LanguageShortHands\languageshorthands
-\def\languageshorthands#1{}
 \usepackage{bookmark}
-
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same} % disable monospaced font for URLs
+\urlstyle{same}
 \hypersetup{
   pdftitle={Manual de Epidemiología},
   pdfauthor={Alfredo Sánchez Alberca},
@@ -211,8 +222,7 @@
 \makeatother
 \subtitle{para Ciencias de la Salud}
 \author{Alfredo Sánchez Alberca}
-\date{2026-08-30}
-
+\date{2026-08-31}
 \begin{document}
 \begin{titlepage}
 
@@ -244,7 +254,6 @@ Alberca}\\ \textsf{asalber@ceu.es} \\ \textsf{https://aprendeconalf.es}}
 \end{titlepage}
 \renewcommand*\contentsname{Indice de contenidos}
 {
-\hypersetup{linkcolor=}
 \setcounter{tocdepth}{2}
 \tableofcontents
 }
@@ -590,7 +599,7 @@ Entonces, la probabilidad de curación del tratamiento es
 
 \end{example}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, left=2mm, opacitybacktitle=0.6, colframe=quarto-callout-warning-color-frame, toptitle=1mm, titlerule=0mm, bottomtitle=1mm, toprule=.15mm, opacityback=0, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Advertencia}, breakable, colback=white, leftrule=.75mm, rightrule=.15mm, coltitle=black, bottomrule=.15mm, colbacktitle=quarto-callout-warning-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-warning-color!10!white, colframe=quarto-callout-warning-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Advertencia}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
 
 La definición frecuentista no permite calcular el valor exacto de la
 probabilidad de un suceso, sino tan solo una aproximación, que será
@@ -636,7 +645,7 @@ La probabilidad mide la verosimilitud de un suceso. De manera informal,
 se puede decir que la probabilidad mide la creencia o la confianza que
 tenemos en la ocurrencia de un suceso.
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, left=2mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, toptitle=1mm, titlerule=0mm, bottomtitle=1mm, toprule=.15mm, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Interpretación}, breakable, colback=white, leftrule=.75mm, rightrule=.15mm, coltitle=black, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Interpretación}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
 
 \begin{itemize}
 \tightlist
@@ -692,7 +701,7 @@ es decir, por cada persona que no se cura hay 3 que se curan.
 
 \end{example}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, left=2mm, opacitybacktitle=0.6, colframe=quarto-callout-warning-color-frame, toptitle=1mm, titlerule=0mm, bottomtitle=1mm, toprule=.15mm, opacityback=0, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Advertencia}, breakable, colback=white, leftrule=.75mm, rightrule=.15mm, coltitle=black, bottomrule=.15mm, colbacktitle=quarto-callout-warning-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-warning-color!10!white, colframe=quarto-callout-warning-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Advertencia}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
 
 A diferencia de una probabilidad, un odds puede ser mayor que 1. De
 hecho, no tiene cota superior.
@@ -706,7 +715,7 @@ Los odds también permiten cuantificar la verosimilitud de un
 suceso\ldots, pero en una escala diferente, ya que se trata de una razón
 de probabilidades.
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, left=2mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, toptitle=1mm, titlerule=0mm, bottomtitle=1mm, toprule=.15mm, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Interpretación}, breakable, colback=white, leftrule=.75mm, rightrule=.15mm, coltitle=black, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Interpretación}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
 
 \begin{itemize}
 \tightlist
@@ -811,7 +820,7 @@ año fue
 
 \end{example}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, left=2mm, opacitybacktitle=0.6, colframe=quarto-callout-important-color-frame, toptitle=1mm, titlerule=0mm, bottomtitle=1mm, toprule=.15mm, opacityback=0, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Importante}, breakable, colback=white, leftrule=.75mm, rightrule=.15mm, coltitle=black, bottomrule=.15mm, colbacktitle=quarto-callout-important-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-important-color!10!white, colframe=quarto-callout-important-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Importante}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
 
 En la incidencia, el denominador no es el tamaño de la población, sino
 el tamaño de la \emph{población en riesgo}, es decir, las personas que
@@ -967,6 +976,7 @@ Para estudiar la eficacia de una vacuna contra la gripe se ha tomado una
 muestra de 500 personas vacunadas y otra de 500 no vacunadas,
 obteniéndose los siguientes resultados.
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}lcc@{}}
 \toprule\noalign{}
 & Gripe \(G\) & No gripe \(\overline{G}\) \\
@@ -977,6 +987,7 @@ obteniéndose los siguientes resultados.
 Vacunados \(T\) & 20 & 480 \\
 No vacunados \(C\) & 80 & 420 \\
 \end{longtable}
+}
 
 El riesgo relativo de padecer gripe es
 
@@ -990,7 +1001,7 @@ del riesgo en los no vacunados.
 \subsection{Interpretación del riesgo
 relativo}\label{interpretaciuxf3n-del-riesgo-relativo}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, left=2mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, toptitle=1mm, titlerule=0mm, bottomtitle=1mm, toprule=.15mm, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Interpretación}, breakable, colback=white, leftrule=.75mm, rightrule=.15mm, coltitle=black, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Interpretación}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
 
 \begin{itemize}
 \tightlist
@@ -1040,6 +1051,7 @@ control,
 
 Con los datos del ejemplo anterior,
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}lcc@{}}
 \toprule\noalign{}
 & Gripe \(G\) & No gripe \(\overline{G}\) \\
@@ -1050,6 +1062,7 @@ Con los datos del ejemplo anterior,
 Vacunados \(T\) & 20 & 480 \\
 No vacunados \(C\) & 80 & 420 \\
 \end{longtable}
+}
 
 el odds ratio de padecer gripe es
 
@@ -1060,7 +1073,7 @@ el odds ratio de padecer gripe es
 \subsection{Interpretación del odds
 ratio}\label{interpretaciuxf3n-del-odds-ratio}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, left=2mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, toptitle=1mm, titlerule=0mm, bottomtitle=1mm, toprule=.15mm, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Interpretación}, breakable, colback=white, leftrule=.75mm, rightrule=.15mm, coltitle=black, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Interpretación}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
 
 \begin{itemize}
 \tightlist
@@ -1098,6 +1111,7 @@ Para estudiar la asociación entre fumar y el cáncer de pulmón se han
 tomado dos muestras, la segunda con el doble de pacientes sanos que la
 primera.
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}lcc@{}}
 \toprule\noalign{}
 \textbf{Muestra 1} & Cáncer \(E\) & No cáncer \(\overline{E}\) \\
@@ -1108,6 +1122,7 @@ primera.
 Fumadores \(T\) & 60 & 80 \\
 No fumadores \(C\) & 40 & 320 \\
 \end{longtable}
+}
 
 \[
 \begin{aligned}
@@ -1116,6 +1131,7 @@ OR(E) &= \frac{60/80}{40/320} = 6.
 \end{aligned}
 \]
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}lcc@{}}
 \toprule\noalign{}
 \textbf{Muestra 2} & Cáncer \(E\) & No cáncer \(\overline{E}\) \\
@@ -1126,6 +1142,7 @@ OR(E) &= \frac{60/80}{40/320} = 6.
 Fumadores \(T\) & 60 & 160 \\
 No fumadores \(C\) & 40 & 640 \\
 \end{longtable}
+}
 
 \[
 \begin{aligned}
@@ -1269,6 +1286,7 @@ enfermedad en la población a la que se aplica.
 Utilizando el test del ejemplo anterior en una población de 1000
 personas y suponiendo una prevalencia del 1 \%, se tiene
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}lcc@{}}
 \toprule\noalign{}
 Test & \(E\) & \(\overline{E}\) \\
@@ -1279,6 +1297,7 @@ Test & \(E\) & \(\overline{E}\) \\
 Positivo \(+\) & 7 & 50 \\
 Negativo \(-\) & 3 & 940 \\
 \end{longtable}
+}
 
 \begin{figure}
 
@@ -1296,6 +1315,7 @@ y una prevalencia del 1 \%}
 
 Mientras que, si la prevalencia es del 10 \%, se tiene
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}lcc@{}}
 \toprule\noalign{}
 Test & \(E\) & \(\overline{E}\) \\
@@ -1306,6 +1326,7 @@ Test & \(E\) & \(\overline{E}\) \\
 Positivo \(+\) & 70 & 45 \\
 Negativo \(-\) & 30 & 855 \\
 \end{longtable}
+}
 
 \begin{figure}
 
@@ -1328,7 +1349,7 @@ prevalencia del 10 \% la mayoría son verdaderos positivos.
 
 \end{example}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, left=2mm, opacitybacktitle=0.6, colframe=quarto-callout-tip-color-frame, toptitle=1mm, titlerule=0mm, bottomtitle=1mm, toprule=.15mm, opacityback=0, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Aplicación interactiva}, breakable, colback=white, leftrule=.75mm, rightrule=.15mm, coltitle=black, bottomrule=.15mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Aplicación interactiva}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
 
 Para ver los resultados de un test diagnóstico en función de la
 prevalencia, la sensibilidad y la especificidad se puede utilizar esta
@@ -1406,6 +1427,7 @@ resultado negativo en el test,
 Siguiendo con el ejemplo anterior y suponiendo una prevalencia del 1 \%,
 se tiene
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}lcc@{}}
 \toprule\noalign{}
 Test & \(E\) & \(\overline{E}\) \\
@@ -1416,11 +1438,13 @@ Test & \(E\) & \(\overline{E}\) \\
 Positivo \(+\) & 7 & 50 \\
 Negativo \(-\) & 3 & 940 \\
 \end{longtable}
+}
 
 \[VPP = \frac{7}{7+50} = 0.123, \qquad VPN = \frac{940}{3+940} = 0.997.\]
 
 Mientras que, si la prevalencia es del 10 \%, se tiene
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}lcc@{}}
 \toprule\noalign{}
 Test & \(E\) & \(\overline{E}\) \\
@@ -1431,12 +1455,13 @@ Test & \(E\) & \(\overline{E}\) \\
 Positivo \(+\) & 70 & 45 \\
 Negativo \(-\) & 30 & 855 \\
 \end{longtable}
+}
 
 \[VPP = \frac{70}{70+45} = 0.609, \qquad VPN = \frac{855}{30+855} = 0.966.\]
 
 \end{example}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, left=2mm, opacitybacktitle=0.6, colframe=quarto-callout-important-color-frame, toptitle=1mm, titlerule=0mm, bottomtitle=1mm, toprule=.15mm, opacityback=0, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Importante}, breakable, colback=white, leftrule=.75mm, rightrule=.15mm, coltitle=black, bottomrule=.15mm, colbacktitle=quarto-callout-important-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-important-color!10!white, colframe=quarto-callout-important-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Importante}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
 
 A diferencia de la sensibilidad y la especificidad, que son propiedades
 del test, los valores predictivos dependen de la prevalencia de la
@@ -1449,7 +1474,7 @@ con prevalencia baja.
 \subsection{Interpretación de los valores
 predictivos}\label{interpretaciuxf3n-de-los-valores-predictivos}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, left=2mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, toptitle=1mm, titlerule=0mm, bottomtitle=1mm, toprule=.15mm, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Interpretación}, breakable, colback=white, leftrule=.75mm, rightrule=.15mm, coltitle=black, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Interpretación}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
 
 \[
 \begin{array}{rcl}
@@ -1510,7 +1535,7 @@ umbrales de positivo del test.
 \subsection{Interpretación de la curva
 ROC}\label{interpretaciuxf3n-de-la-curva-roc}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, left=2mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, toptitle=1mm, titlerule=0mm, bottomtitle=1mm, toprule=.15mm, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Interpretación}, breakable, colback=white, leftrule=.75mm, rightrule=.15mm, coltitle=black, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Interpretación}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
 
 \begin{itemize}
 \tightlist
